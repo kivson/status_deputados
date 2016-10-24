@@ -1,2 +1,2 @@
 # status_deputados
-Gera atributos de jogos para Deputados federais.
+Agrupa informações de Comissões, presença e projetos de Deputados Federais.
