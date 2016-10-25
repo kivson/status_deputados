@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from api_camara import todos_deputados, add_comissao_status, add_presenca
+from camara.api_camara import todos_deputados, add_comissao_status, add_presenca, add_proposicoes
 
 
 class TestApiCamara(TestCase):
@@ -13,8 +13,11 @@ class TestApiCamara(TestCase):
         deputado = add_comissao_status(dict(ideCadastro=141480))
         self.assertEqual(deputado.get('comissoes_stats'), {'Titular': 8, 'Suplente': 2})
 
-
     def test_add_presenca(self):
         deputado = add_presenca(dict(matricula=371))
+        self.fail()
 
+    def test_add_proposicoes(self):
+        deputado = add_proposicoes(dict(ideCadastro=141480,nomeParlamentar="LÁZARO BOTELHO"))
+        print(deputado)
         self.fail()
